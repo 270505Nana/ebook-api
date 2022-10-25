@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Authcontroller;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,5 @@ Route::get('me', [Authcontroller::class, 'me']);
 
 Route::resource('books', BookController::class)->except(['create','edit']
 );
+
+Route::resource('author', AuthorController::class);
